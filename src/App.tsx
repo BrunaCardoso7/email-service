@@ -2,13 +2,20 @@ import { useState } from 'react'
 import './App.css'
 import PrimeryInput from './components/Input/PrimeryInput'
 import { Button, Spacer } from '@chakra-ui/react'
-
+import { useIdetifyMutation } from './hooks/useIdetifyMutation'
 function App() {
+  const { mutate }= useIdetifyMutation()
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [sobrenome, setSobrenome] = useState("")
   // const handleChange = (evt: HTMLInputElement)=>{setEmail(evt.target.value)}
-
+  const submit = ()=>{
+    mutate({
+      email,
+      name, 
+      sobrenome
+    })
+  }
   return (
     <div className='wrapper'>
       <form action="">
@@ -32,7 +39,7 @@ function App() {
         name={ email }
         placeholder='fulano@gmail.com'
         label='Email:'/>
-        <Button className='button_submit' colorScheme='green' width="100%">Enviar</Button>
+        <Button className='button_submit' colorScheme='green' width="100%" onSubmit={ submit }>Enviar</Button>
       </form>
       <Spacer width="8" maxW={3}/>
       <div className="product-details">
