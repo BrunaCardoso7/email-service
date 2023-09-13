@@ -1,0 +1,10 @@
+.input-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-conteiner .label{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
