@@ -3,8 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .input-conteiner .label{
-    font-size: 24px;
+    font-size: 32px 24px;
     margin-bottom: 8px;
+    font-size: 16px;
+    text-align: start;
+    width: 100%;
+    color: gray;
+    font-weight: 500;
 }

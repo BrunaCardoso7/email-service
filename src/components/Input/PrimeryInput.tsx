@@ -4,6 +4,7 @@ import './primeryInput.css'
 interface PrimeryInputProps {
     name: string,//vai ser usado na contrução do label
     value: string,
+    placeholder: string,
     onChange: ChangeEventHandler<HTMLInputElement>,
     label: string
 }
@@ -11,13 +12,14 @@ export default function PrimeryInput ({
     name,
     value, 
     onChange,
-    label 
+    label,
+    placeholder
     }: PrimeryInputProps){
     return(
         <div className="input-conteiner">
             <label className="label">{label}</label>
             <Input variant='filled'
-            placeholder='Digite aqui o email...'
+            placeholder={placeholder}
             name={ name }
             value={ value }
             onChange={ onChange }/>
