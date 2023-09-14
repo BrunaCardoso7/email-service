@@ -2,6 +2,7 @@ import { PersonData } from './../interface/person-data';
 import { useMutation } from "react-query";
 
 import axios from "axios";
+
 const postData = (data: PersonData) => {
     return axios.post("https://localhost:8080/send-data", data)
 }
